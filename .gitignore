@@ -1,0 +1,24 @@
+# Python/Django specific
+*.pyc
+__pycache__/
+db.sqlite3
+*.log
+
+# venv
+venv/
+
+# Django static and media files
+staticfiles/
+media/
+
+# Environment variables
+*.env
+
+# VS Code settings
+.vscode/
+
+# Ignore all migrations files (if you don't want to commit them)
+**/migrations/
+
+# Ignore collectstatic results
+/staticfiles/

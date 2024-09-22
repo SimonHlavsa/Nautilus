@@ -1,0 +1,37 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% trans "Nautilus" %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Horní menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a></li>
+                <li><a href="{% url 'registration' %}">{% trans "Join Us" %}</a></li>
+                <li><a href="{% url 'calendar' %}">{% trans "Events Calendar" %}</a></li>
+                <li><a href="{% url 'gallery' %}">{% trans "Gallery" %}</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hlavní obsah -->
+    <main>
+        {% block content %}
+        <!-- Tento blok bude přepisován jednotlivými stránkami -->
+        {% endblock %}
+    </main>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2024 Nautilus. {% trans "All rights reserved." %}</p>
+    </footer>
+</body>
+</html>
