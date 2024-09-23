@@ -1,0 +1,37 @@
+{% extends "main/base.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Registration Form" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>{% trans "Register" %}</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email">{% trans "Email" %}</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <!-- First name field -->
+            <div class="form-group">
+                <label for="first_name">{% trans "First Name" %}</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required>
+            </div>
+
+            <!-- Last name field -->
+            <div class="form-group">
+                <label for="last_name">{% trans "Last Name" %}</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+            </div>
+            
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
+        </form>
+    </div>
+{% endblock %}

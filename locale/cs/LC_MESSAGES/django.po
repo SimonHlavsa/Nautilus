@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-23 04:05+0200\n"
+"POT-Creation-Date: 2024-09-24 00:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,29 +19,62 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
-#: .\main\templates\main\base.html:27
+#: .\main\templates\main\base.html:26
 msgid "Home"
 msgstr "Domů"
 
-#: .\main\templates\main\base.html:30
+#: .\main\templates\main\base.html:29
 msgid "Events Calendar"
 msgstr "Kalendář akcí"
 
-#: .\main\templates\main\base.html:33
+#: .\main\templates\main\base.html:32
 msgid "Join Us"
 msgstr "Připojte se k nám"
 
-#: .\main\templates\main\base.html:36
+#: .\main\templates\main\base.html:35
 msgid "Gallery"
 msgstr "Galerie"
 
-#: .\main\templates\main\base.html:39
+#: .\main\templates\main\base.html:38
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: .\main\templates\main\base.html:62
+#: .\main\templates\main\base.html:69
 msgid "All rights reserved."
 msgstr "Všechna práva vyhrazena."
+
+#: .\main\templates\main\form.html:5
+msgid "Registration Form"
+msgstr "Registrační formulář"
+
+#: .\main\templates\main\form.html:10
+msgid "Register"
+msgstr "Registrovat se"
+
+#: .\main\templates\main\form.html:17
+msgid "Email"
+msgstr "Email"
+
+#: .\main\templates\main\form.html:23
+msgid "First Name"
+msgstr "Jméno"
+
+#: .\main\templates\main\form.html:29
+msgid "Last Name"
+msgstr "Příjmení"
+
+#: .\main\templates\main\form.html:34
+msgid "Submit"
+msgstr "Odeslat"
+
+#: .\main\templates\main\form_success.html:5
+#: .\main\templates\main\form_success.html:10
+msgid "Thank You"
+msgstr "Děkujeme"
+
+#: .\main\templates\main\form_success.html:11
+msgid "Your registration has been submitted successfully."
+msgstr "Vaše registrace byla úspěšně odeslána."
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"

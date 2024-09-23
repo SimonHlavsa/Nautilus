@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-23 04:06+0200\n"
+"POT-Creation-Date: 2024-09-24 00:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,28 +18,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main\templates\main\base.html:27
+#: .\main\templates\main\base.html:26
 msgid "Home"
 msgstr ""
 
-#: .\main\templates\main\base.html:30
+#: .\main\templates\main\base.html:29
 msgid "Events Calendar"
 msgstr ""
 
-#: .\main\templates\main\base.html:33
+#: .\main\templates\main\base.html:32
 msgid "Join Us"
 msgstr ""
 
-#: .\main\templates\main\base.html:36
+#: .\main\templates\main\base.html:35
 msgid "Gallery"
 msgstr ""
 
-#: .\main\templates\main\base.html:39
+#: .\main\templates\main\base.html:38
 msgid "Contacts"
 msgstr ""
 
-#: .\main\templates\main\base.html:62
+#: .\main\templates\main\base.html:69
 msgid "All rights reserved."
+msgstr ""
+
+#: .\main\templates\main\form.html:5
+msgid "Registration Form"
+msgstr ""
+
+#: .\main\templates\main\form.html:10
+msgid "Register"
+msgstr ""
+
+#: .\main\templates\main\form.html:17
+msgid "Email"
+msgstr ""
+
+#: .\main\templates\main\form.html:23
+msgid "First Name"
+msgstr ""
+
+#: .\main\templates\main\form.html:29
+msgid "Last Name"
+msgstr ""
+
+#: .\main\templates\main\form.html:34
+msgid "Submit"
+msgstr ""
+
+#: .\main\templates\main\form_success.html:5
+#: .\main\templates\main\form_success.html:10
+msgid "Thank You"
+msgstr ""
+
+#: .\main\templates\main\form_success.html:11
+msgid "Your registration has been submitted successfully."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16

@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.mail import send_mail
-# from .forms import RegistrationForm
+from django.conf import settings
+from .forms import RegistrationForm
 
 def homepage(request):
     return render(request, 'main/base.html')
@@ -16,19 +17,23 @@ def registration(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            # Send an email with the form data
+            # Process email sending
+            email = form.cleaned_data['email']
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+
             send_mail(
-                'New registration for the club',
-                f"Name: {form.cleaned_data['name']}\nEmail: {form.cleaned_data['email']}",
-                'from@example.com',  # Sender (set your own)
-                ['to@example.com'],  # Recipient (e.g., the club's email)
+                'New Registration',  # Email subject
+                f"First Name: {first_name}\nLast Name: {last_name}\nEmail: {email}",  # Email content
+                settings.DEFAULT_FROM_EMAIL,  # Sender (set your own)
+                ['simon.hlavsa55@gmail.com'],  # Recipient
             )
-            return HttpResponse('Thank you for registering!')
+
+            return render(request, 'main/form_success.html')  # Display success page after form submission
     else:
         form = RegistrationForm()
 
-    return render(request, 'main/registration.html', {'form': form})
-
+    return render(request, 'main/form.html', {'form': form})  # Render form template with the form object
 
 def calendar(request):
     # Here you can load events via API and send them to the template
