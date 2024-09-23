@@ -1,0 +1,16 @@
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.language-link {
+    text-decoration: none;
+    color: inherit;
+    color: black;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.language-link:hover {
+    color: blue;
+}

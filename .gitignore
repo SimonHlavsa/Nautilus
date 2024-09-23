@@ -22,3 +22,6 @@ media/
 
 # Ignore collectstatic results
 /staticfiles/
+
+# Ignore compiled messages
+*.mo

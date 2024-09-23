@@ -1,10 +1,10 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.mail import send_mail
-from django.http import HttpResponse
 # from .forms import RegistrationForm
 
 def homepage(request):
-    return render(request, 'main/homepage.html')
+    return render(request, 'main/base.html')
 
 def contacts(request):
     return render(request, 'main/contacts.html')
