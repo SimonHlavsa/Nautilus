@@ -25,3 +25,6 @@ media/
 
 # Ignore compiled messages
 *.mo
+
+# Ignore sensitive data
+.env
