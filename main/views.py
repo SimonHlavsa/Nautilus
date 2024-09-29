@@ -1,23 +1,16 @@
-from django.shortcuts import render
 from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+from django.shortcuts import render
+from django.template.loader import render_to_string
 from .forms import RegistrationForm
 
 def homepage(request):
     return render(request, 'main/base.html')
 
-def contacts(request):
-    return render(request, 'main/contacts.html')
-
-def gallery(request):
-    return render(request, 'main/gallery.html')
-
-# views.py
-
-from django.shortcuts import render
-from django.core.mail import EmailMultiAlternatives
-from django.conf import settings
-from .forms import RegistrationForm
-from django.template.loader import render_to_string
+def calendar(request):
+    # Here you can load events via API and send them to the template
+    events = []  # Currently an empty list
+    return render(request, 'main/calendar.html', {'events': events})
 
 def registration(request):
     if request.method == 'POST':
@@ -79,8 +72,8 @@ Certification Level: {certification_level}
         form = RegistrationForm()
     return render(request, 'main/form.html', {'form': form})
 
+def gallery(request):
+    return render(request, 'main/gallery.html')
 
-def calendar(request):
-    # Here you can load events via API and send them to the template
-    events = []  # Currently an empty list
-    return render(request, 'main/calendar.html', {'events': events})
+def contacts(request):
+    return render(request, 'main/contacts.html')

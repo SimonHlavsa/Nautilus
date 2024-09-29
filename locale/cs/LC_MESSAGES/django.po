@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-30 00:18+0200\n"
+"POT-Creation-Date: 2024-09-30 00:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,6 +63,10 @@ msgstr "Telefonní číslo"
 msgid "Highest Diver Certification"
 msgstr "Nejvyšší certifikace potápěče"
 
+#: .\main\forms.py:56
+msgid "Proof of Certification"
+msgstr "Doklad o certifikaci"
+
 #: .\main\forms.py:69
 msgid "The email address must end with '@vse.cz'."
 msgstr "E-mailová adresa musí končit na '@vse.cz'."
@@ -83,13 +87,41 @@ msgstr "Připojte se k nám"
 msgid "Gallery"
 msgstr "Galerie"
 
-#: .\main\templates\main\base.html:38
+#: .\main\templates\main\base.html:38 .\main\templates\main\contacts.html:7
 msgid "Contacts"
 msgstr "Kontakty"
 
 #: .\main\templates\main\base.html:69
 msgid "All rights reserved."
 msgstr "Všechna práva vyhrazena."
+
+#: .\main\templates\main\contacts.html:4
+msgid "Contacts - Nautilus"
+msgstr "Kontakty - Nautilus"
+
+#: .\main\templates\main\contacts.html:13
+msgid "Contact 1"
+msgstr "Kontakt 1"
+
+#: .\main\templates\main\contacts.html:16
+msgid "Position: Instructor"
+msgstr "Pozice: Instruktor"
+
+#: .\main\templates\main\contacts.html:27
+msgid "Contact 2"
+msgstr "Kontakt 2"
+
+#: .\main\templates\main\contacts.html:30
+msgid "Position: President"
+msgstr "Pozice: Předseda"
+
+#: .\main\templates\main\contacts.html:41
+msgid "Contact 3"
+msgstr "Kontakt 3"
+
+#: .\main\templates\main\contacts.html:44
+msgid "Position:  Vice President"
+msgstr "Pozice: Místopředseda"
 
 #: .\main\templates\main\form.html:5
 msgid "Registration Form"

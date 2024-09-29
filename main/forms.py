@@ -53,7 +53,7 @@ class RegistrationForm(forms.Form):
     )
 
     certification_proof_files = MultipleFileField(
-        label="Proof of Certification",
+        label=_("Proof of Certification"),
         required=False,
         help_text=(
             "Please upload a photo of your diving license/a screenshot from a diving app or other online source. "
