@@ -1,0 +1,16 @@
+/* styles.css or home.css */
+
+/* Registration Container Styles */
+.registration-container {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+.registration-container h2 {
+    font-size: 1.75rem;
+    color: #333333;
+    font-weight: 600;
+}

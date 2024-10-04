@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 from .forms import RegistrationForm
 
 def homepage(request):
-    return render(request, 'main/base.html')
+    return render(request, 'main/home.html')
 
 def calendar(request):
     # Here you can load events via API and send them to the template
@@ -65,12 +65,12 @@ Certification Level: {certification_level}
             # Send the email
             email_message.send()
 
-            return render(request, 'main/form_success.html')
+            return render(request, 'main/registration.html')
         else:
-            return render(request, 'main/form.html', {'form': form})
+            return render(request, 'main/registration.html', {'form': form})
     else:
         form = RegistrationForm()
-    return render(request, 'main/form.html', {'form': form})
+    return render(request, 'main/registration.html', {'form': form})
 
 def gallery(request):
     return render(request, 'main/gallery.html')

@@ -1,52 +1,51 @@
 {% extends 'main/base.html' %}
 {% load static i18n %}
 
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'main/css/contacts.css' %}">
+{% endblock %}
+
 {% block title %}{% trans "Contacts - Nautilus" %}{% endblock %}
 
 {% block content %}
-<h1 class="mb-4">{% trans "Contacts" %}</h1>
+    <h1 class="mb-4">{% trans "Contacts" %}</h1>
 
-<div class="row">
     <!-- Contact 1 -->
-    <div class="col-md-4">
-        <div class="card mb-4">
-            <img src="{% static 'images/contact1-placeholder.jpg' %}" class="card-img-top" alt="{% trans "Contact 1" %}">
-            <div class="card-body">
-                <h5 class="card-title">John Doe</h5>
-                <p class="card-text">{% trans "Position: Instructor" %}</p>
-                <p class="card-text">
-                    <a href="mailto:john.doe@example.com">john.doe@example.com</a>
-                </p>
-            </div>
+    <div class="contact-card mb-4 row">
+        <div class="col-md-4">
+            <img src="{% static 'main/img/person_placeholder.svg' %}" class="img-fluid" alt="{% trans "Contact 1" %}">
+        </div>
+        <div class="col-md-8">
+            <h5 class="contact-name">John Doe</h5>
+            <p class="contact-position">{% trans "Position: Instructor" %}</p>
+            <p class="contact-email">
+                <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+            </p>
         </div>
     </div>
-
-    <!-- Contact 2 -->
-    <div class="col-md-4">
-        <div class="card mb-4">
-            <img src="{% static 'images/contact2-placeholder.jpg' %}" class="card-img-top" alt="{% trans "Contact 2" %}">
-            <div class="card-body">
-                <h5 class="card-title">Jane Smith</h5>
-                <p class="card-text">{% trans "Position: President" %}</p>
-                <p class="card-text">
-                    <a href="mailto:jane.smith@example.com">jane.smith@example.com</a>
-                </p>
-            </div>
+    <!-- Add more contacts as needed -->
+    <div class="contact-card mb-4 row">
+        <div class="col-md-4">
+            <img src="{% static 'main/img/person_placeholder.svg' %}" class="img-fluid" alt="{% trans "Contact 1" %}">
+        </div>
+        <div class="col-md-8">
+            <h5 class="contact-name">John Doe</h5>
+            <p class="contact-position">{% trans "Position: Instructor" %}</p>
+            <p class="contact-email">
+                <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+            </p>
         </div>
     </div>
-
-    <!-- Contact 3 -->
-    <div class="col-md-4">
-        <div class="card mb-4">
-            <img src="{% static 'images/contact3-placeholder.jpg' %}" class="card-img-top" alt="{% trans "Contact 3" %}">
-            <div class="card-body">
-                <h5 class="card-title">Bob Johnson</h5>
-                <p class="card-text">{% trans "Position:  Vice President" %}</p>
-                <p class="card-text">
-                    <a href="mailto:bob.johnson@example.com">bob.johnson@example.com</a>
-                </p>
-            </div>
+    <div class="contact-card mb-4 row">
+        <div class="col-md-4">
+            <img src="{% static 'main/img/person_placeholder.svg' %}" class="img-fluid" alt="{% trans "Contact 1" %}">
+        </div>
+        <div class="col-md-8">
+            <h5 class="contact-name">John Doe</h5>
+            <p class="contact-position">{% trans "Position: Instructor" %}</p>
+            <p class="contact-email">
+                <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+            </p>
         </div>
     </div>
-</div>
 {% endblock %}

@@ -1,0 +1,149 @@
+/* home.css */
+
+/* =========================================
+   Home Page Specific Styles
+========================================= */
+
+/* Hero Section */
+.main-header {
+    height: 85vh;
+    background-image: url("/static/main/img/navbar_background.jpg"); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#navbar {
+    background: transparent;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: #000000;
+}
+
+
+.main-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust transparency */
+    z-index: 1;
+}
+
+.main-header h1,
+.main-header h2 {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+    margin: 0;
+}
+
+/* Adjust margin between navbar and content */
+.custom-container {
+    background: transparent;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+/* Content Sections */
+.club-section,
+.naui-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0; /* Added padding */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.club-section:last-child,
+.naui-section:last-child {
+    border-bottom: none;
+}
+
+.club-logo,
+.naui-logo {
+    flex: 0 0 150px; /* Fixed width for logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club-logo img,
+.naui-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire logo is visible */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.naui-logo img {
+    background-color: #333333;
+    padding: 3px;
+}
+
+.club-info,
+.naui-info {
+    flex: 1;
+    padding-left: 1.5rem;
+}
+
+.club-info h3,
+.naui-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.club-info p,
+.naui-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .club-section,
+    .naui-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 0; /* Adjusted padding for mobile */
+    }
+
+    .club-logo,
+    .naui-logo {
+        margin-bottom: 1rem;
+    }
+
+    .club-info,
+    .naui-info {
+        padding-left: 0;
+    }
+
+    .club-info h3,
+    .naui-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .club-info p,
+    .naui-info p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Additional Modern Enhancements */
+
+/* Ensure uniform spacing and alignment */
+.club-section,
+.naui-section {
+    margin-bottom: 2rem; /* Consistent spacing between sections */
+}

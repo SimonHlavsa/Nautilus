@@ -1,76 +1,69 @@
 {% load static i18n %}
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Nautilus{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    {% block extra_head %}{% endblock %}
 </head>
 <body>
-    <!-- Header with logo, navigation -->
-    <header class="bg-light py-3">
-        <div class="container">
+    <!-- Navbar -->
+    <nav class="custom-navbar fixed-top" id="navbar">
+        <div class="navbar-container">
             <div class="d-flex justify-content-between align-items-center">
-                <!-- Left: Logo -->
-                <div>
-                    <img src="{% static 'images/logo-placeholder.png' %}" alt="Logo" class="logo">
-                </div>
-
-                <!-- Center: Navigation -->
-                <nav>
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'homepage' %}">{% trans "Home" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'calendar' %}">{% trans "Events Calendar" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'registration' %}">{% trans "Join Us" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'gallery' %}">{% trans "Gallery" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- Right: Language switcher -->
-                <div>
-                    <form id="language-form" action="{% url 'set_language' %}" method="post" style="display: inline;">
-                        {% csrf_token %}
-                        <input type="hidden" name="next" value="{{ request.path }}">
-                        <input type="hidden" id="language-input" name="language" value="cs">
-                
-                        <!-- Links for switching language -->
-                        <a href="#" class="language-link" onclick="document.getElementById('language-input').value='cs'; document.getElementById('language-form').submit();">CS</a>
-                        <a href="#" class="language-link" onclick="document.getElementById('language-input').value='en'; document.getElementById('language-form').submit();">EN</a>
-                    </form>
-                </div>
-                
-                
+                <a class="navbar-brand text-uppercase" href="{% url 'homepage' %}">Nautilus</a>
+                <!-- Navigation Links -->
+                <ul class="nav-links d-flex justify-content-between align-items-center">
+                    <li>
+                        <a class="nav-link  {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}" href="{% url 'homepage' %}">{% trans "Home" %}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link  {% if request.resolver_match.url_name == 'calendar' %}active{% endif %}" href="{% url 'calendar' %}">{% trans "Events Calendar" %}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link  {% if request.resolver_match.url_name == 'registration' %}active{% endif %}" href="{% url 'registration' %}">{% trans "Join Us" %}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link  {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}" href="{% url 'gallery' %}">{% trans "Gallery" %}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link  {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}" href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
+                    </li>
+                </ul>
+                <!-- Language Switcher -->
+                <form id="language-form" action="{% url 'set_language' %}" method="post" class="d-flex align-items-center">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <input type="hidden" id="language-input" name="language" value="cs">
+                    <a href="#" class="nav-link text-uppercase" onclick="document.getElementById('language-input').value='cs'; document.getElementById('language-form').submit();">CS</a>
+                    <span class="nav-link text-uppercase">|</span>
+                    <a href="#" class="nav-link text-uppercase" onclick="document.getElementById('language-input').value='en'; document.getElementById('language-form').submit();">EN</a>
+                </form>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main content area -->
-    <main class="container my-5">
+    <!-- Main content -->
+    {% block header %}{% endblock %}
+    <main class="custom-container">
         {% block content %}{% endblock %}
     </main>
 
     <!-- Footer -->
-    <footer class="bg-light py-3">
-        <div class="container text-center">
-            <p>&copy; 2024 Nautilus. {% trans "All rights reserved." %}</p>
+    <footer class="bg-dark py-3">
+        <div class="custom-container text-center">
+            <p class="text-white mb-0 text-uppercase">&copy; 2024 Nautilus. {% trans "All rights reserved." %}</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_scripts %}{% endblock %}
 </body>
 </html>

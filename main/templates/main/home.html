@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% load static i18n %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+{% endblock %}
+
+{% block title %}Nautilus{% endblock %}
+
+{% block header %}
+<!-- Hero Section -->
+<header class="main-header d-flex flex-column justify-content-center align-items-center text-center">
+    <h1 class="display-4">{% trans "Diving Club" %}</h1>
+    <h2 class="lead">{% trans "University of Economics" %}</h2>
+</header>
+{% endblock %}
+
+{% block content %}
+    <!-- Club Section -->
+    <section class="club-section">
+        <div class="club-logo">
+            <img src="{% static 'main/img/logo_en.jpeg' %}" alt="Club Logo" class="img-fluid">
+        </div>
+        <div class="club-info">
+            <h3>About Our Diving Club</h3>
+            <p>
+                Welcome to the Nautilus Diving Club at the University of Economics! Our club is dedicated to fostering a passionate community of divers who are enthusiastic about exploring the underwater world. We offer a range of diving courses for all skill levels, from beginners to advanced divers. Our regular diving excursions take members to some of the most beautiful and diverse diving sites, providing opportunities to learn, practice, and enjoy the wonders of marine life. Additionally, we are actively involved in environmental conservation projects, promoting sustainable diving practices and participating in reef restoration efforts. Join us to enhance your diving skills, make new friends, and contribute to preserving our precious marine ecosystems.
+            </p>
+        </div>
+    </section>
+
+    <!-- NAUI Section -->
+    <section class="naui-section">
+        <div class="naui-logo">
+            <img src="{% static 'main/img/naui_logo.png' %}" alt="NAUI Logo" class="img-fluid">
+        </div>
+        <div class="naui-info">
+            <h3>About NAUI</h3>
+            <p>
+                The National Association of Underwater Instructors (NAUI) is a globally recognized leader in diver training and certification. NAUI is committed to ensuring the highest standards of safety, education, and environmental stewardship in the diving community. By partnering with NAUI, our club provides members with access to comprehensive training programs, expert instructors, and a supportive network of diving professionals. NAUI's emphasis on personalized instruction and continuous skill development aligns perfectly with our mission to cultivate knowledgeable and responsible divers. Whether you're looking to obtain your Open Water Diver certification, advance to specialty courses, or participate in professional development opportunities, NAUI offers the resources and expertise to help you achieve your diving goals.
+            </p>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block extra_scripts %}
+<script src="{% static 'main/js/home.js' %}"></script>
+{% endblock %}

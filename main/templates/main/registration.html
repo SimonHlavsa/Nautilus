@@ -1,0 +1,22 @@
+{% extends "main/base.html" %}
+{% load i18n crispy_forms_tags %}
+
+{% block title %}
+    {% trans "Registration Form" %}
+{% endblock %}
+
+{% block content %}
+    <div class="registration-container my-5">
+        <!-- Translated Heading -->
+        <h2 class="mb-4 text-left">{% trans "Join Our Diving Club" %}</h2>
+
+        <!-- Registration Form -->
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="mt-3">
+                <button class="btn btn-primary" type="submit">{% trans "Submit" %}</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

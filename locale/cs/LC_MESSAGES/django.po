@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-30 00:50+0200\n"
+"POT-Creation-Date: 2024-10-05 01:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,65 +71,45 @@ msgstr "Doklad o certifikaci"
 msgid "The email address must end with '@vse.cz'."
 msgstr "E-mailová adresa musí končit na '@vse.cz'."
 
-#: .\main\templates\main\base.html:26
+#: .\main\templates\main\base.html:24
 msgid "Home"
 msgstr "Domů"
 
-#: .\main\templates\main\base.html:29
+#: .\main\templates\main\base.html:27
 msgid "Events Calendar"
 msgstr "Kalendář akcí"
 
-#: .\main\templates\main\base.html:32
+#: .\main\templates\main\base.html:30
 msgid "Join Us"
 msgstr "Připojte se k nám"
 
-#: .\main\templates\main\base.html:35
+#: .\main\templates\main\base.html:33
 msgid "Gallery"
 msgstr "Galerie"
 
-#: .\main\templates\main\base.html:38 .\main\templates\main\contacts.html:7
+#: .\main\templates\main\base.html:36 .\main\templates\main\contacts.html:11
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: .\main\templates\main\base.html:69
+#: .\main\templates\main\base.html:61
 msgid "All rights reserved."
 msgstr "Všechna práva vyhrazena."
 
-#: .\main\templates\main\contacts.html:4
+#: .\main\templates\main\contacts.html:8
 msgid "Contacts - Nautilus"
 msgstr "Kontakty - Nautilus"
 
-#: .\main\templates\main\contacts.html:13
+#: .\main\templates\main\contacts.html:16
+#: .\main\templates\main\contacts.html:29
+#: .\main\templates\main\contacts.html:41
 msgid "Contact 1"
 msgstr "Kontakt 1"
 
-#: .\main\templates\main\contacts.html:16
+#: .\main\templates\main\contacts.html:20
+#: .\main\templates\main\contacts.html:33
+#: .\main\templates\main\contacts.html:45
 msgid "Position: Instructor"
 msgstr "Pozice: Instruktor"
-
-#: .\main\templates\main\contacts.html:27
-msgid "Contact 2"
-msgstr "Kontakt 2"
-
-#: .\main\templates\main\contacts.html:30
-msgid "Position: President"
-msgstr "Pozice: Předseda"
-
-#: .\main\templates\main\contacts.html:41
-msgid "Contact 3"
-msgstr "Kontakt 3"
-
-#: .\main\templates\main\contacts.html:44
-msgid "Position:  Vice President"
-msgstr "Pozice: Místopředseda"
-
-#: .\main\templates\main\form.html:5
-msgid "Registration Form"
-msgstr "Registrační formulář"
-
-#: .\main\templates\main\form.html:12
-msgid "Submit"
-msgstr "Odeslat"
 
 #: .\main\templates\main\form_success.html:5
 #: .\main\templates\main\form_success.html:10
@@ -139,6 +119,26 @@ msgstr "Děkujeme"
 #: .\main\templates\main\form_success.html:11
 msgid "Your registration has been submitted successfully."
 msgstr "Vaše registrace byla úspěšně odeslána."
+
+#: .\main\templates\main\home.html:13
+msgid "Diving Club"
+msgstr "Potápěčský klub"
+
+#: .\main\templates\main\home.html:14
+msgid "University of Economics"
+msgstr "Vysoká škola ekonomie"
+
+#: .\main\templates\main\registration.html:5
+msgid "Registration Form"
+msgstr "Registrační formulář"
+
+#: .\main\templates\main\registration.html:11
+msgid "Join Our Diving Club"
+msgstr "Přidejte se k našemu potápěčskému klubu"
+
+#: .\main\templates\main\registration.html:18
+msgid "Submit"
+msgstr "Odeslat"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
@@ -1363,6 +1363,18 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Contact 2"
+#~ msgstr "Kontakt 2"
+
+#~ msgid "Position: President"
+#~ msgstr "Pozice: Předseda"
+
+#~ msgid "Contact 3"
+#~ msgstr "Kontakt 3"
+
+#~ msgid "Position:  Vice President"
+#~ msgstr "Pozice: Místopředseda"
 
 #~ msgid "Register"
 #~ msgstr "Registrovat se"

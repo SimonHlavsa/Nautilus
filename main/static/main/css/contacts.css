@@ -1,0 +1,46 @@
+/* contacts.css */
+
+/* Contact Card Layout */
+.contact-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* Image on the Left */
+.contact-card .col-md-4 {
+    order: 1;
+}
+
+.contact-card .col-md-8 {
+    order: 2;
+}
+
+.contact-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-position {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-email a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+/* Limit Image Size */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+}

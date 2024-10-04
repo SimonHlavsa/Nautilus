@@ -1,16 +1,81 @@
-.logo {
-    height: 50px;
-    width: auto;
+/* styles.css */
+
+/* =========================================
+   General Styles
+========================================= */
+
+/* Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
 }
 
-.language-link {
-    text-decoration: none;
-    color: inherit;
-    color: black;
+/* Custom Container */
+.custom-container {
+    max-width: 960px; /* Set desired width */
+    margin: 90px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* =========================================
+   Navigation Styles
+========================================= */
+
+/* General Navbar Styles */
+.custom-navbar {
+    background-color: #000000;
+    font-weight: 500; /* Medium */
+}
+
+.navbar-container {
+    max-width: 960px; /* Set desired width */
+    margin: 0 auto;
+    padding: 10px 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
     text-transform: uppercase;
-    margin-right: 10px;
+    color: white;
+    text-decoration: none;
 }
 
-.language-link:hover {
-    color: blue;
+.navbar-brand:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #e84007;
+}
+
+/* Language Switcher Styles */
+#language-form .nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+#language-form .nav-link:hover {
+    color: #e84007;
+    text-decoration: underline;
 }
