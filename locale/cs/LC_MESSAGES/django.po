@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-05 01:33+0200\n"
+"POT-Creation-Date: 2024-10-07 05:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,6 +67,18 @@ msgstr "Nejvyšší certifikace potápěče"
 msgid "Proof of Certification"
 msgstr "Doklad o certifikaci"
 
+#: .\main\forms.py:59
+msgid ""
+"Please upload a photo of your diving license/a screenshot from a diving app "
+"or other online source. If you don't have the certificate yet, a screenshot "
+"from insis showing you have completed a school diving course with Pavel "
+"Dvořák will suffice, but ideally, proof that you have an open OWD course "
+"with NAUI. Upload up to 5 supported files: PDF or image. Maximum 10 MB per "
+"file."
+msgstr ""
+"Nahrajte prosím fotografii svého potápěčského průkazu/snímek obrazovky z potápěčské aplikace nebo jiného online zdroje. Pokud certifikát ještě nemáte, bude stačit snímek obrazovky z Insis, který prokazuje, že jste absolvovali školní potápěčský kurz s Pavlem Dvořákem, ale ideálně doložte, že máte otevřený OWD kurz s NAUI. Nahrajte až 5 podporovaných souborů: PDF nebo obrázek. Maximálně 10 MB na soubor."
+
+
 #: .\main\forms.py:69
 msgid "The email address must end with '@vse.cz'."
 msgstr "E-mailová adresa musí končit na '@vse.cz'."
@@ -91,9 +103,33 @@ msgstr "Galerie"
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: .\main\templates\main\base.html:61
-msgid "All rights reserved."
-msgstr "Všechna práva vyhrazena."
+#: .\main\templates\main\base.html:63
+msgid "UNIVERSITY OF ECONOMICS"
+msgstr "VYSOKÁ ŠKOLA EKONOMICKÁ"
+
+#: .\main\templates\main\base.html:64
+msgid "DIVING CLUB"
+msgstr "POTÁPĚČSKÝ KLUB"
+
+#: .\main\templates\main\base.html:65
+msgid ""
+"The Diving Club of the University of Economics is a school-affiliated diving "
+"club based in Prague."
+msgstr ""
+"Potápěčský klub Vysoké školy ekonomické je školní potápěčský klub se sídlem "
+"v Praze."
+
+#: .\main\templates\main\base.html:87
+msgid "HELPFUL"
+msgstr "UŽITEČNÉ"
+
+#: .\main\templates\main\base.html:87
+msgid "LINKS"
+msgstr "ODKAZY"
+
+#: .\main\templates\main\base.html:88
+msgid "Useful links to our partners and resources"
+msgstr "Užitečné odkazy na naše partnery a zdroje"
 
 #: .\main\templates\main\contacts.html:8
 msgid "Contacts - Nautilus"
@@ -126,7 +162,7 @@ msgstr "Potápěčský klub"
 
 #: .\main\templates\main\home.html:14
 msgid "University of Economics"
-msgstr "Vysoká škola ekonomie"
+msgstr "Vysoká škola ekonomická"
 
 #: .\main\templates\main\registration.html:5
 msgid "Registration Form"
@@ -1363,6 +1399,9 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "All rights reserved."
+#~ msgstr "Všechna práva vyhrazena."
 
 #~ msgid "Contact 2"
 #~ msgstr "Kontakt 2"

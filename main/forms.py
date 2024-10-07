@@ -55,7 +55,7 @@ class RegistrationForm(forms.Form):
     certification_proof_files = MultipleFileField(
         label=_("Proof of Certification"),
         required=False,
-        help_text=(
+        help_text=_(
             "Please upload a photo of your diving license/a screenshot from a diving app or other online source. "
             "If you don't have the certificate yet, a screenshot from insis showing you have completed a school diving course with Pavel Dvořák will suffice, "
             "but ideally, proof that you have an open OWD course with NAUI. "

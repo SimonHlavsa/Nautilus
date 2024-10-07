@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-05 01:33+0200\n"
+"POT-Creation-Date: 2024-10-07 05:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,16 @@ msgstr ""
 msgid "Proof of Certification"
 msgstr ""
 
+#: .\main\forms.py:59
+msgid ""
+"Please upload a photo of your diving license/a screenshot from a diving app "
+"or other online source. If you don't have the certificate yet, a screenshot "
+"from insis showing you have completed a school diving course with Pavel "
+"Dvořák will suffice, but ideally, proof that you have an open OWD course "
+"with NAUI. Upload up to 5 supported files: PDF or image. Maximum 10 MB per "
+"file."
+msgstr ""
+
 #: .\main\forms.py:69
 msgid "The email address must end with '@vse.cz'."
 msgstr ""
@@ -90,8 +100,30 @@ msgstr ""
 msgid "Contacts"
 msgstr ""
 
-#: .\main\templates\main\base.html:61
-msgid "All rights reserved."
+#: .\main\templates\main\base.html:63
+msgid "UNIVERSITY OF ECONOMICS"
+msgstr ""
+
+#: .\main\templates\main\base.html:64
+msgid "DIVING CLUB"
+msgstr ""
+
+#: .\main\templates\main\base.html:65
+msgid ""
+"The Diving Club of the University of Economics is a school-affiliated diving "
+"club based in Prague."
+msgstr ""
+
+#: .\main\templates\main\base.html:87
+msgid "HELPFUL"
+msgstr ""
+
+#: .\main\templates\main\base.html:87
+msgid "LINKS"
+msgstr ""
+
+#: .\main\templates\main\base.html:88
+msgid "Useful links to our partners and resources"
 msgstr ""
 
 #: .\main\templates\main\contacts.html:8

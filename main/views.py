@@ -28,6 +28,7 @@ def registration(request):
             email_subject = 'New Registration'
             from_email = settings.DEFAULT_FROM_EMAIL
             to_email = ['simon.hlavsa55@gmail.com']
+            # to_email = ['nautilusvse@gmail.com']
 
             # Prepare plain text content
             text_content = f"""
@@ -65,7 +66,7 @@ Certification Level: {certification_level}
             # Send the email
             email_message.send()
 
-            return render(request, 'main/registration.html')
+            return render(request, 'main/form_success.html')
         else:
             return render(request, 'main/registration.html', {'form': form})
     else:

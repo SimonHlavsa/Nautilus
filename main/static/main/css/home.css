@@ -4,7 +4,11 @@
    Home Page Specific Styles
 ========================================= */
 
-/* Hero Section */
+main {
+    margin-top: 0 !important;
+ }
+
+/* Navbar Section */
 .main-header {
     height: 85vh;
     background-image: url("/static/main/img/navbar_background.jpg"); /* Update with your image path */
@@ -28,7 +32,6 @@
     background-color: #000000;
 }
 
-
 .main-header::before {
     content: "";
     position: absolute;
@@ -47,14 +50,11 @@
     margin: 0;
 }
 
-/* Adjust margin between navbar and content */
-.custom-container {
-    background: transparent;
-    margin-top: 1rem;
-    padding-top: 1rem;
+/* Content Sections */
+.content-container {
+    padding-top: 2rem;
 }
 
-/* Content Sections */
 .club-section,
 .naui-section {
     display: flex;
@@ -82,7 +82,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain; /* Ensures the entire logo is visible */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .naui-logo img {
