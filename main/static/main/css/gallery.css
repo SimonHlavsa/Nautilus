@@ -1,0 +1,62 @@
+/* Styles for the folder card */
+.folder-card {
+    position: relative;
+    height: 200px;
+    background-size: cover;        /* Ensures the image covers the container */
+    background-position: center;   /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents image tiling */
+    overflow: hidden;
+}
+
+/* Add light darkening over the image using ::before pseudo-element */
+.folder-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Light darkening */
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Place behind the overlay */
+}
+
+/* Increase darkening on hover */
+.folder-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker on hover */
+}
+
+/* Link fills the entire card */
+.folder-card a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Above the darkening overlay */
+}
+
+/* Overlay to center the text */
+.folder-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Above all other elements */
+}
+
+/* Text styling */
+.folder-card h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Change text color on hover */
+.folder-card:hover h2 {
+    color: #e84007; /* Change to desired color on hover */
+}

@@ -9,4 +9,5 @@ urlpatterns = [
     path('registration/', views.registration, name='registration'),
     path('calendar/', views.calendar, name='calendar'),
     path('gallery/', views.gallery, name='gallery'),
+    path('gallery/<str:folder_id>/', views.gallery_detail, name='gallery_detail'),
 ]

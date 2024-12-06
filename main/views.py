@@ -1,18 +1,40 @@
+import os
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import render
 from django.template.loader import render_to_string
+from django.shortcuts import render
+from main.drive_utils import get_folders, get_images_in_folder
 from .forms import RegistrationForm
 
 def homepage(request):
+    """
+    Renders the homepage view.
+    
+    This view returns the homepage template, providing the basic introduction 
+    to the site.
+    """
     return render(request, 'main/home.html')
 
 def calendar(request):
-    # Here you can load events via API and send them to the template
+    """
+    Renders the calendar view.
+    
+    This view can load events from an external API and pass them to the 
+    template for display. Currently, it sends an empty list as a placeholder.
+    """
     events = []  # Currently an empty list
     return render(request, 'main/calendar.html', {'events': events})
 
 def registration(request):
+    """
+    Handles the registration form submission and email notification.
+
+    If the request is a POST, it validates the submitted data, retrieves it, 
+    and sends a notification email. If the form is not valid, it re-renders 
+    the registration form with validation errors. For GET requests, it 
+    displays an empty registration form.
+    """
     if request.method == 'POST':
         form = RegistrationForm(request.POST, request.FILES)
         if form.is_valid():
@@ -28,7 +50,6 @@ def registration(request):
             email_subject = 'New Registration'
             from_email = settings.DEFAULT_FROM_EMAIL
             to_email = ['simon.hlavsa55@gmail.com']
-            # to_email = ['nautilusvse@gmail.com']
 
             # Prepare plain text content
             text_content = f"""
@@ -74,7 +95,43 @@ Certification Level: {certification_level}
     return render(request, 'main/registration.html', {'form': form})
 
 def gallery(request):
-    return render(request, 'main/gallery.html')
+    """
+    Displays the gallery view with folders and their thumbnails.
+
+    This view retrieves folders from Google Drive and, for each folder, fetches
+    images to display the first image as a thumbnail. The results are cached 
+    for optimization.
+    """
+    root_folder_id = os.environ.get('GOOGLE_FOLDER_ID')
+    folders = get_folders(root_folder_id)  # pokusí se načíst z cache, jinak z API
+    enhanced_folders = []
+
+    for folder in folders:
+        images = get_images_in_folder(folder['id'])  # Z cache nebo API
+        first_image = images[0] if images else None
+        thumbnail_link = first_image.get('thumbnailLink') if first_image else None
+        enhanced_folders.append({
+            'id': folder['id'],
+            'name': folder['name'],
+            'thumbnailLink': thumbnail_link
+        })
+        
+    return render(request, 'main/gallery.html', {'folders': enhanced_folders})
+
+def gallery_detail(request, folder_id):
+    """
+    Displays all images within a selected folder on Google Drive.
+
+    This view retrieves images from the specified folder using cache or API 
+    and renders them in the gallery detail template.
+    """
+    photos = get_images_in_folder(folder_id)  # Načte obrázky z cache nebo API
+    return render(request, 'main/gallery_detail.html', {'photos': photos})
 
 def contacts(request):
+    """
+    Renders the contacts view.
+
+    This view displays contact information and related resources for the site.
+    """
     return render(request, 'main/contacts.html')

@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'main/css/gallery_detail.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+<h1>Fotografie</h1>
+<div class="photos">
+    {% for photo in photos %}
+        <div class="photo">
+            <img src="{{ photo.thumbnailLink }}" alt="{{ photo.name }}">
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

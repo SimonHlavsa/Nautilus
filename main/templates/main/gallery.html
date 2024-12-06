@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+{% load static i18n %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'main/css/gallery.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Galerie</h1>
+<div class="container">
+    <div class="row">
+        {% for folder in folders %}
+            <div class="col-md-4 mb-4">
+                <div class="folder-card" style="background-image: url('{{ folder.thumbnailLink }}');">
+                    <a href="{% url 'gallery_detail' folder.id %}">
+                        <div class="overlay">
+                            <h2>{{ folder.name }}</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
