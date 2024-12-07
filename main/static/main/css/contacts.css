@@ -1,46 +1,114 @@
-/* contacts.css */
+/* Main heading */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+}
 
-/* Contact Card Layout */
-.contact-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    background-color: #fff;
+/* Styling for team member cards */
+.contact-card-modern {
     display: flex;
     align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
-/* Image on the Left */
-.contact-card .col-md-4 {
-    order: 1;
+/* Styling for images in the cards */
+.contact-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #ddd;
 }
 
-.contact-card .col-md-8 {
-    order: 2;
+/* Styling for contact details */
+.contact-details {
+    flex: 1;
 }
 
 .contact-name {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    text-transform: uppercase;
+    margin: 0;
+    color: #333;
 }
 
 .contact-position {
-    font-size: 1.1rem;
-    color: #555;
+    margin: 5px 0;
+    color: #666;
+    font-size: 1rem;
 }
 
 .contact-email a {
-    color: #007bff;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
 }
 
 .contact-email a:hover {
+    color: #e84007;
     text-decoration: underline;
 }
 
-/* Limit Image Size */
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-    max-height: 150px;
+/* Address section */
+.address-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.address-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.address-section p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.address-section a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.address-section a:hover {
+    color: #e84007;
+    text-decoration: underline;
+}
+
+/* Social media section */
+.social-media {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }

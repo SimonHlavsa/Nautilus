@@ -8,44 +8,85 @@
 {% block title %}{% trans "Contacts - Nautilus" %}{% endblock %}
 
 {% block content %}
-    <h1 class="mb-4">{% trans "Contacts" %}</h1>
+    <div class="content-containe">
+        <h1 class="mb-4">{% trans "Our Team" %}</h1>
 
-    <!-- Contact 1 -->
-    <div class="contact-card mb-4 row">
-        <div class="col-md-4">
-            <img src="{% static 'main/img/person_placeholder.svg' %}" class="img-fluid" alt="{% trans "Contact 1" %}">
+            <!-- Member 1 -->
+            <div class="contact-card-modern mb-4">
+                <div class="contact-image">
+                    <img src="{% static 'main/img/person_placeholder.svg' %}" alt="member">
+                </div>
+                <div class="contact-details">
+                    <h5 class="contact-name">Pavel Dvořák</h5>
+                    <p class="contact-position">{% trans "Position: Instructor" %}</p>
+                    <p class="contact-email">
+                        <a href="mailto:john.doe@example.com">dvorakpv@vse.cz</a>
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Member 2 -->
+            <div class="contact-card-modern mb-4">
+                <div class="contact-image">
+                    <img src="{% static 'main/img/person_placeholder.svg' %}" alt="member">
+                </div>
+                <div class="contact-details">
+                    <h5 class="contact-name">Michaela Černínová</h5>
+                    <p class="contact-position">{% trans "Position: Organizer" %}</p>
+                    <p class="contact-email">
+                        <a href="mailto:jane.smith@example.com">cerm40@vse.cz</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="contact-card-modern mb-4">
+                <div class="contact-image">
+                    <img src="{% static 'main/img/person_placeholder.svg' %}" alt="member">
+                </div>
+                <div class="contact-details">
+                    <h5 class="contact-name">Monika Pakostová</h5>
+                    <p class="contact-position">{% trans "Position: Chairman" %}</p>
+                    <p class="contact-email">
+                        <a href="mailto:jane.smith@example.com">pakm01@vse.cz</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="contact-card-modern mb-4">
+                <div class="contact-image">
+                    <img src="{% static 'main/img/person_placeholder.svg' %}" alt="member">
+                </div>
+                <div class="contact-details">
+                    <h5 class="contact-name">Míša Svobodová</h5>
+                    <p class="contact-position">{% trans "Position: Deputy chairman" %}</p>
+                    <p class="contact-email">
+                        <a href="mailto:jane.smith@example.com">svom30@vse.cz</a>
+                    </p>
+                </div>
+            </div>
+
+        <!-- Add more members similarly -->
+
+        <!-- Address Section -->
+        <div class="address-section mt-5">
+            <h2 class="address-title">{% trans "Address" %}</h2>
+            <p>{% trans "Nám. Winstona Churchilla 1938/4, 120 00 Praha 3-Žižkov" %}</p>
+            <p><a href="https://www.google.com/maps/place/Vysok%C3%A1+%C5%A1kola+ekonomick%C3%A1+v+Praze/@50.0938351,14.4509293,14z/data=!4m6!3m5!1s0x470b95e2efaa4db9:0x9007d9c1f752550c!8m2!3d50.0842386!4d14.4411405!16zL20vMDYzdnJx?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">{% trans "View on Google Maps" %}</a></p>
         </div>
-        <div class="col-md-8">
-            <h5 class="contact-name">John Doe</h5>
-            <p class="contact-position">{% trans "Position: Instructor" %}</p>
-            <p class="contact-email">
-                <a href="mailto:john.doe@example.com">john.doe@example.com</a>
-            </p>
-        </div>
-    </div>
-    <!-- Add more contacts as needed -->
-    <div class="contact-card mb-4 row">
-        <div class="col-md-4">
-            <img src="{% static 'main/img/person_placeholder.svg' %}" class="img-fluid" alt="{% trans "Contact 1" %}">
-        </div>
-        <div class="col-md-8">
-            <h5 class="contact-name">John Doe</h5>
-            <p class="contact-position">{% trans "Position: Instructor" %}</p>
-            <p class="contact-email">
-                <a href="mailto:john.doe@example.com">john.doe@example.com</a>
-            </p>
-        </div>
-    </div>
-    <div class="contact-card mb-4 row">
-        <div class="col-md-4">
-            <img src="{% static 'main/img/person_placeholder.svg' %}" class="img-fluid" alt="{% trans "Contact 1" %}">
-        </div>
-        <div class="col-md-8">
-            <h5 class="contact-name">John Doe</h5>
-            <p class="contact-position">{% trans "Position: Instructor" %}</p>
-            <p class="contact-email">
-                <a href="mailto:john.doe@example.com">john.doe@example.com</a>
-            </p>
+
+        <!-- Social Media Links -->
+        <div class="social-media my-5">
+            <h2 class="social-title">{% trans "Follow Us" %}</h2>
+            <div class="social-icons d-flex justify-content-center gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61567016394258&locale=cs_CZ" target="_blank" aria-label="Facebook">
+                    <img src="{% static 'main/img/facebook.png' %}" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/nautilus_vse/" target="_blank" aria-label="Instagram">
+                    <img src="{% static 'main/img/instagram.png' %}" alt="Instagram">
+                </a>
+            </div>
         </div>
     </div>
 {% endblock %}
