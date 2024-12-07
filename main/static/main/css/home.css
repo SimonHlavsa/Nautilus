@@ -112,6 +112,10 @@ main {
 }
 
 @media (max-width: 768px) {
+    .main-header {
+        height: 55vh;
+    }
+
     .club-section,
     .naui-section {
         flex-direction: column;
@@ -121,6 +125,7 @@ main {
 
     .club-logo,
     .naui-logo {
+        width: 40%;
         margin-bottom: 1rem;
     }
 
