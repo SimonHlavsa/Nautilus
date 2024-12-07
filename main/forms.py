@@ -18,10 +18,10 @@ class MultipleFileInput(forms.ClearableFileInput):
 
 CERTIFICATION_CHOICES = [
     ('in_training', _('In Training')),
-    ('owd', _('OWD')),
-    ('aowd', _('AOWD')),
-    ('divemaster', _('Dive Master')),
-    ('instructor', _('Dive Instructor')),
+    ('owd', 'OWD'),
+    ('aowd', 'AOWD'),
+    ('divemaster', 'Dive Master'),
+    ('instructor', 'Dive Instructor'),
     ('other', _('Other'))
 ]
 

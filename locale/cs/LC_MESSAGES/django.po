@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 05:40+0200\n"
+"POT-Creation-Date: 2024-12-07 06:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,23 +21,7 @@ msgstr ""
 
 #: .\main\forms.py:20
 msgid "In Training"
-msgstr "In Training"
-
-#: .\main\forms.py:21
-msgid "OWD"
-msgstr "OWD"
-
-#: .\main\forms.py:22
-msgid "AOWD"
-msgstr "AOWD"
-
-#: .\main\forms.py:23
-msgid "Dive Master"
-msgstr "Dive Master"
-
-#: .\main\forms.py:24
-msgid "Dive Instructor"
-msgstr "Dive Instructor"
+msgstr "Ve výcviku"
 
 #: .\main\forms.py:25
 msgid "Other"
@@ -61,11 +45,11 @@ msgstr "Telefonní číslo"
 
 #: .\main\forms.py:51
 msgid "Highest Diver Certification"
-msgstr "Nejvyšší certifikace potápěče"
+msgstr "Nejvyšší potápěčská certifikace"
 
 #: .\main\forms.py:56
 msgid "Proof of Certification"
-msgstr "Doklad o certifikaci"
+msgstr "Důkaz o certifikaci"
 
 #: .\main\forms.py:59
 msgid ""
@@ -76,76 +60,95 @@ msgid ""
 "with NAUI. Upload up to 5 supported files: PDF or image. Maximum 10 MB per "
 "file."
 msgstr ""
-"Nahrajte prosím fotografii svého potápěčského průkazu/snímek obrazovky z potápěčské aplikace nebo jiného online zdroje. Pokud certifikát ještě nemáte, bude stačit snímek obrazovky z Insis, který prokazuje, že jste absolvovali školní potápěčský kurz s Pavlem Dvořákem, ale ideálně doložte, že máte otevřený OWD kurz s NAUI. Nahrajte až 5 podporovaných souborů: PDF nebo obrázek. Maximálně 10 MB na soubor."
+"Prosím nahrajte fotografii vaší potápěčské licence/screenshot z potápěčské "
+"aplikace nebo jiného online zdroje. Pokud ještě certifikát nemáte, postačí "
+"screenshot z insis, který dokládá, že jste absolvovali školní potápěčský "
+"kurz s Pavlem Dvořákem. Ideálně však důkaz, že máte otevřený kurz OWD u "
+"NAUI. Nahrajte až 5 podporovaných souborů: PDF nebo obrázek. Maximální "
+"velikost jednoho souboru je 10 MB."
 
-
-#: .\main\forms.py:69
-msgid "The email address must end with '@vse.cz'."
-msgstr "E-mailová adresa musí končit na '@vse.cz'."
-
-#: .\main\templates\main\base.html:24
+#: .\main\templates\main\base.html:30 .\main\templates\main\base.html:69
 msgid "Home"
 msgstr "Domů"
 
-#: .\main\templates\main\base.html:27
+#: .\main\templates\main\base.html:33 .\main\templates\main\base.html:72
+#: .\main\templates\main\calendar.html:9
 msgid "Events Calendar"
-msgstr "Kalendář akcí"
+msgstr "Kalendář událostí"
 
-#: .\main\templates\main\base.html:30
+#: .\main\templates\main\base.html:36 .\main\templates\main\base.html:75
 msgid "Join Us"
-msgstr "Připojte se k nám"
+msgstr "Přidejte se k nám"
 
-#: .\main\templates\main\base.html:33
+#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:78
+#: .\main\templates\main\gallery.html:10
 msgid "Gallery"
 msgstr "Galerie"
 
-#: .\main\templates\main\base.html:36 .\main\templates\main\contacts.html:11
+#: .\main\templates\main\base.html:42 .\main\templates\main\base.html:81
+#: .\main\templates\main\contacts.html:8
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: .\main\templates\main\base.html:63
+#: .\main\templates\main\base.html:110
 msgid "UNIVERSITY OF ECONOMICS"
 msgstr "VYSOKÁ ŠKOLA EKONOMICKÁ"
 
-#: .\main\templates\main\base.html:64
+#: .\main\templates\main\base.html:111
 msgid "DIVING CLUB"
 msgstr "POTÁPĚČSKÝ KLUB"
 
-#: .\main\templates\main\base.html:65
+#: .\main\templates\main\base.html:112
 msgid ""
-"The Diving Club of the University of Economics is a school-affiliated diving "
-"club based in Prague."
+"The Diving Club of the University of Economics is a school-affiliated club "
+"based in Prague."
 msgstr ""
-"Potápěčský klub Vysoké školy ekonomické je školní potápěčský klub se sídlem "
-"v Praze."
+"Potápěčský klub Vysoké školy ekonomické je školní klub se sídlem v Praze."
 
-#: .\main\templates\main\base.html:87
+#: .\main\templates\main\base.html:133
 msgid "HELPFUL"
 msgstr "UŽITEČNÉ"
 
-#: .\main\templates\main\base.html:87
+#: .\main\templates\main\base.html:133
 msgid "LINKS"
 msgstr "ODKAZY"
 
-#: .\main\templates\main\base.html:88
+#: .\main\templates\main\base.html:134
 msgid "Useful links to our partners and resources"
 msgstr "Užitečné odkazy na naše partnery a zdroje"
 
-#: .\main\templates\main\contacts.html:8
-msgid "Contacts - Nautilus"
-msgstr "Kontakty - Nautilus"
+#: .\main\templates\main\calendar.html:10
+msgid "There are currently no events scheduled."
+msgstr "Momentálně nejsou vypsány žádné akce."
 
-#: .\main\templates\main\contacts.html:16
-#: .\main\templates\main\contacts.html:29
-#: .\main\templates\main\contacts.html:41
-msgid "Contact 1"
-msgstr "Kontakt 1"
+#: .\main\templates\main\contacts.html:12
+msgid "Our Team"
+msgstr "Náš tým"
 
-#: .\main\templates\main\contacts.html:20
-#: .\main\templates\main\contacts.html:33
-#: .\main\templates\main\contacts.html:45
+#: .\main\templates\main\contacts.html:21
 msgid "Position: Instructor"
 msgstr "Pozice: Instruktor"
+
+#: .\main\templates\main\contacts.html:35
+msgid "Position: Chairman"
+msgstr "Pozice: Předseda"
+
+#: .\main\templates\main\contacts.html:49
+#: .\main\templates\main\contacts.html:63
+msgid "Position: Deputy chairman"
+msgstr "Pozice: Místopředseda"
+
+#: .\main\templates\main\contacts.html:74
+msgid "Address"
+msgstr "Adresa"
+
+#: .\main\templates\main\contacts.html:76
+msgid "View on Google Maps"
+msgstr "Zobrazit na Google Maps"
+
+#: .\main\templates\main\contacts.html:81
+msgid "Follow Us"
+msgstr "Sledujte nás"
 
 #: .\main\templates\main\form_success.html:5
 #: .\main\templates\main\form_success.html:10
@@ -156,13 +159,75 @@ msgstr "Děkujeme"
 msgid "Your registration has been submitted successfully."
 msgstr "Vaše registrace byla úspěšně odeslána."
 
-#: .\main\templates\main\home.html:13
+#: .\main\templates\main\home.html:14
 msgid "Diving Club"
 msgstr "Potápěčský klub"
 
-#: .\main\templates\main\home.html:14
+#: .\main\templates\main\home.html:15
 msgid "University of Economics"
 msgstr "Vysoká škola ekonomická"
+
+#: .\main\templates\main\home.html:28
+#, fuzzy
+#| msgid "Join Our Diving Club"
+msgid "About Our Diving Club"
+msgstr "O našem potápěčském klubu"
+
+#: .\main\templates\main\home.html:30
+msgid ""
+"Welcome to the Nautilus Diving Club at the University of Economics! Our club "
+"is dedicated to fostering a passionate community of divers who are "
+"enthusiastic about exploring the underwater world. We offer a range of "
+"diving courses for all skill levels, from beginners to advanced divers. Our "
+"regular diving excursions take members to some of the most beautiful and "
+"diverse diving sites, providing opportunities to learn, practice, and enjoy "
+"the wonders of marine life. Additionally, we are actively involved in "
+"environmental conservation projects and promoting sustainable diving "
+"practices. Join us to enhance your diving skills, travel and make new "
+"friends."
+msgstr ""
+"Vítejte v potápěčském klubu Nautilus na Vysoké škole ekonomické! Náš klub se "
+"zaměřuje na budování vášnivé komunity potápěčů, kteří rádi objevují podvodní "
+"svět. Nabízíme širokou škálu potápěčských kurzů pro všechny úrovně "
+"dovedností, od začátečníků po pokročilé potápěče. Naše pravidelné potápěčské "
+"výlety zavádějí členy na některá z nejkrásnějších a nejrozmanitějších "
+"potápěčských míst, poskytují příležitosti učit se, cvičit a obdivovat krásy "
+"mořského života. Kromě toho se aktivně podílíme na projektech ochrany "
+"životního prostředí a propagujeme udržitelné potápěčské praktiky. Připojte "
+"se k nám, zlepšujte své potápěčské dovednosti, cestujte a poznávejte nové "
+"přátele."
+
+#: .\main\templates\main\home.html:41
+msgid "About NAUI"
+msgstr "O NAUI"
+
+#: .\main\templates\main\home.html:43
+msgid ""
+"The National Association of Underwater Instructors (NAUI) is a globally "
+"recognized leader in diver training and certification. NAUI is committed to "
+"ensuring the highest standards of safety, education, and environmental "
+"stewardship in the diving community. By partnering with NAUI, our club "
+"provides members with access to comprehensive training programs, expert "
+"instructors, and a supportive network of diving professionals. NAUI's "
+"emphasis on personalized instruction and continuous skill development aligns "
+"perfectly with our mission to cultivate knowledgeable and responsible "
+"divers. Whether you're looking to obtain your Open Water Diver "
+"certification, advance to specialty courses, or participate in professional "
+"development opportunities, NAUI offers the resources and expertise to help "
+"you achieve your diving goals."
+msgstr ""
+"Národní asociace podvodních instruktorů (NAUI) je celosvětově uznávaným "
+"líderem v oblasti výcviku a certifikace potápěčů. NAUI se zavazuje k "
+"zajištění nejvyšších standardů bezpečnosti, vzdělávání a ochrany životního "
+"prostředí v potápěčské komunitě. Ve spolupráci s NAUI poskytuje náš klub "
+"členům přístup k komplexním výcvikovým programům, odborným instruktorům a "
+"podpůrnému networkingu profesionálních potápěčů. Zaměření NAUI na "
+"personalizovanou výuku a neustálý rozvoj dovedností dokonale odpovídá našemu "
+"poslání podporovat znalé a odpovědné potápěče. Ať už chcete získat "
+"certifikaci Open Water Diver, rozšířit své dovednosti v specializovaných "
+"kurzech nebo se zapojit do profesionálních vývojových příležitostí, NAUI "
+"nabízí zdroje a odborné znalosti, které vám pomohou dosáhnout vašich "
+"potápěčských cílů."
 
 #: .\main\templates\main\registration.html:5
 msgid "Registration Form"
@@ -170,7 +235,7 @@ msgstr "Registrační formulář"
 
 #: .\main\templates\main\registration.html:11
 msgid "Join Our Diving Club"
-msgstr "Přidejte se k našemu potápěčskému klubu"
+msgstr "Připojte se k našemu potápěčskému klubu"
 
 #: .\main\templates\main\registration.html:18
 msgid "Submit"
@@ -1400,23 +1465,34 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#~ msgid "All rights reserved."
-#~ msgstr "Všechna práva vyhrazena."
+#: .\venv\Lib\site-packages\httplib2\__init__.py:408
+#, python-format
+msgid "Content purported to be compressed with %s but failed to decompress."
+msgstr ""
 
-#~ msgid "Contact 2"
-#~ msgstr "Kontakt 2"
+#: .\venv\Lib\site-packages\httplib2\__init__.py:572
+#, python-format
+msgid "Unsupported value for qop: %s."
+msgstr ""
 
-#~ msgid "Position: President"
-#~ msgstr "Pozice: Předseda"
+#: .\venv\Lib\site-packages\httplib2\__init__.py:576
+#: .\venv\Lib\site-packages\httplib2\__init__.py:654
+#, python-format
+msgid "Unsupported value for algorithm: %s."
+msgstr ""
 
-#~ msgid "Contact 3"
-#~ msgstr "Kontakt 3"
+#: .\venv\Lib\site-packages\httplib2\__init__.py:649
+msgid "The challenge doesn't contain a server nonce, or this one is empty."
+msgstr ""
 
-#~ msgid "Position:  Vice President"
-#~ msgstr "Pozice: Místopředseda"
+#: .\venv\Lib\site-packages\httplib2\__init__.py:659
+#, python-format
+msgid "Unsupported value for pw-algorithm: %s."
+msgstr ""
 
-#~ msgid "Register"
-#~ msgstr "Registrovat se"
+#: .\venv\Lib\site-packages\httplib2\__init__.py:1468
+msgid "Redirected but the response is missing a Location: header."
+msgstr ""
 
-#~ msgid "Email"
-#~ msgstr "Email"
+#~ msgid "Position: Organizer"
+#~ msgstr "Pozice: Organizátor"

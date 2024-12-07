@@ -1,12 +1,12 @@
 {% extends "main/base.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_head %}
 <link rel="stylesheet" href="{% static 'main/css/gallery_detail.css' %}">
 {% endblock extra_head %}
 
 {% block content %}
-<h1 class="text-center">Galerie</h1>
+<h1 class="text-center">{{ folder_name }}</h1>
 <div class="photos">
     {% for image in images %}
         <div class="photo">

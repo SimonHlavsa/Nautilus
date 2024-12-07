@@ -7,11 +7,11 @@
 
 {% block content %}
 
-<h1 class="text-center">Galerie</h1>
+<h1 class="text-center">{% trans "Gallery" %}</h1>
 <div class="gallery-wrapper">
     {% for folder in folders %}
         <div class="folder-card" style="background-image: url('{{ folder.thumbnailLink }}');">
-            <a href="{% url 'gallery_detail' folder.id %}">
+            <a href="{% url 'gallery_detail' %}?folder_id={{ folder.id }}&folder_name={{ folder.name|urlencode }}">
                 <div class="overlay">
                     <h2>{{ folder.name }}</h2>
                 </div>

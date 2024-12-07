@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.shortcuts import render
 from main.drive_utils import get_folders, get_images_in_folder
-from .forms import RegistrationForm
+from main.forms import RegistrationForm
 
 def homepage(request):
     """
@@ -121,26 +121,29 @@ def gallery(request):
         
     return render(request, 'main/gallery.html', {'folders': enhanced_folders})
 
-def gallery_detail(request, folder_id):
+def gallery_detail(request):
     """
     Displays all images within a selected folder on Google Drive.
 
     This view retrieves images from the specified folder using cache or API 
     and renders them in the gallery detail template.
     """
+    folder_id = request.GET.get('folder_id')
+    folder_name = request.GET.get('folder_name', 'Gallery')
     refresh = request.GET.get('refresh', None)
 
     images = get_images_in_folder(folder_id, refresh=bool(refresh))
     enhanced_folders = []
+
     for img in images:
         thumbnail_link = img.get('thumbnailLink') if img else None
         high_res_link = thumbnail_link.replace("s220", "s800")
         enhanced_folders.append({
             'name': img['name'],
-            'high_res_link': high_res_link 
+            'high_res_link': high_res_link,
         })
 
-    return render(request, 'main/gallery_detail.html', {'images': enhanced_folders})
+    return render(request, 'main/gallery_detail.html', {'images': enhanced_folders, 'folder_name': folder_name})
 
 def contacts(request):
     """
