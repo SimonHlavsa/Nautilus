@@ -1,12 +1,12 @@
 {% extends "main/base.html" %}
-{% load i18n crispy_forms_tags %}
+{% load static i18n crispy_forms_tags %}
 
 {% block title %}
     {% trans "Registration Form" %}
 {% endblock %}
 
 {% block content %}
-    <div class="registration-container my-5">
+    <div class="registration-container mb-4">
         <!-- Translated Heading -->
         <h2 class="mb-4 text-left">{% trans "Join Our Diving Club" %}</h2>
 
@@ -19,4 +19,8 @@
             </div>
         </form>
     </div>
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="{% static 'main/js/phone.js' %}"></script>
 {% endblock %}

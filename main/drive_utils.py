@@ -2,7 +2,7 @@ import os
 import requests
 from django.core.cache import cache
 
-def get_folders(folder_id):
+def get_folders(folder_id, refresh=False):
     """
     Retrieves a list of all folders within a specified folder on Google Drive,
     utilizing cache for optimization.
@@ -16,9 +16,11 @@ def get_folders(folder_id):
              API request fails.
     """
     cache_key = f"folders_{folder_id}"
-    folders = cache.get(cache_key)
-    if folders is not None:
-        return folders
+    
+    if not refresh:
+        folders = cache.get(cache_key)
+        if folders is not None:
+            return folders
 
     url = "https://www.googleapis.com/drive/v3/files"
     params = {
@@ -37,7 +39,7 @@ def get_folders(folder_id):
         return []
 
 
-def get_images_in_folder(folder_id):
+def get_images_in_folder(folder_id, refresh=False):
     """
     Retrieves all images within a specific folder on Google Drive, utilizing 
     cache for optimization.
@@ -51,9 +53,11 @@ def get_images_in_folder(folder_id):
              API request fails.
     """
     cache_key = f"images_in_{folder_id}"
-    images = cache.get(cache_key)
-    if images is not None:
-        return images
+
+    if not refresh:
+        images = cache.get(cache_key)
+        if images is not None:
+            return images
 
     url = "https://www.googleapis.com/drive/v3/files"
     query = f"'{folder_id}' in parents and mimeType contains 'image/' and trashed=false"

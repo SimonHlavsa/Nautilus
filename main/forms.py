@@ -45,7 +45,7 @@ class RegistrationForm(forms.Form):
     first_name = forms.CharField(label=_("First Name"), max_length=100)
     last_name = forms.CharField(label=_("Last Name"), max_length=100)
     email = forms.EmailField(label=_("School email"), max_length=100)
-    phone = forms.CharField(label=_("Phone number"), max_length=100)
+    phone = forms.CharField(label=_("Phone number"), max_length=16)
 
     certification_level = forms.ChoiceField(
         label=_("Highest Diver Certification"),
@@ -63,11 +63,11 @@ class RegistrationForm(forms.Form):
         )
     )
 
-    def clean_email(self):
-        email = self.cleaned_data.get('email')
-        if not email.endswith('@vse.cz'):
-            raise forms.ValidationError(_("The email address must end with '@vse.cz'."))
-        return email
+    # def clean_email(self):
+        # email = self.cleaned_data.get('email')
+        # if not email.endswith('@vse.cz'):
+        #     raise forms.ValidationError(_("The email address must end with '@vse.cz'."))
+        # return email
 
     def clean_certification_proof_files(self):
         files = self.cleaned_data.get('certification_proof_files')

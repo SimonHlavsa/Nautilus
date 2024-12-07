@@ -6,11 +6,11 @@
 {% endblock extra_head %}
 
 {% block content %}
-<h1>Fotografie</h1>
+<h1 class="text-center">Galerie</h1>
 <div class="photos">
-    {% for photo in photos %}
+    {% for image in images %}
         <div class="photo">
-            <img src="{{ photo.thumbnailLink }}" alt="{{ photo.name }}">
+            <img src="{{ image.high_res_link }}" alt="{{ image.name }}">
         </div>
     {% endfor %}
 </div>
