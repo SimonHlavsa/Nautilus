@@ -13,7 +13,7 @@ main {
     height: 85vh;
     flex: 0 0 auto;
     position: relative;
-    background-image: url("/static/main/img/navbar_background.jpg");
+    background-image: url("/static/main/img/navbar_background.JPG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
