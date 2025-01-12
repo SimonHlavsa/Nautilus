@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.shortcuts import render
+from django.views.decorators.http import require_http_methods
 from main.drive_utils import get_folders, get_images_in_folder
 from main.forms import RegistrationForm
 
@@ -157,5 +158,6 @@ def contacts(request):
     """
     return render(request, 'main/contacts.html')
 
+@require_http_methods(["HEAD", "GET"])
 def ping(request):
     return HttpResponse("pong")
