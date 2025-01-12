@@ -38,6 +38,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'nautilus-d84r.onrender.com',
+    'nautilus-vse.cz',
+    'www.nautilus-vse.cz',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
