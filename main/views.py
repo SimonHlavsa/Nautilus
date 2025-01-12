@@ -110,6 +110,9 @@ def gallery(request):
 
     for folder in folders:
         images = get_images_in_folder(folder['id'], refresh=bool(refresh))
+        if not images:
+            continue
+        
         first_image = images[0] if images else None
         thumbnail_link = first_image.get('thumbnailLink') if first_image else None
         high_res_link = thumbnail_link.replace("s220", "s800")
