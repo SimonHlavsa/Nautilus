@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 05:41+0200\n"
+"POT-Creation-Date: 2025-01-12 18:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,26 +16,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: .\main\forms.py:20
 msgid "In Training"
-msgstr ""
-
-#: .\main\forms.py:21
-msgid "OWD"
-msgstr ""
-
-#: .\main\forms.py:22
-msgid "AOWD"
-msgstr ""
-
-#: .\main\forms.py:23
-msgid "Dive Master"
-msgstr ""
-
-#: .\main\forms.py:24
-msgid "Dive Instructor"
 msgstr ""
 
 #: .\main\forms.py:25
@@ -76,70 +60,86 @@ msgid ""
 "file."
 msgstr ""
 
-#: .\main\forms.py:69
-msgid "The email address must end with '@vse.cz'."
-msgstr ""
-
-#: .\main\templates\main\base.html:24
+#: .\main\templates\main\base.html:32 .\main\templates\main\base.html:71
 msgid "Home"
 msgstr ""
 
-#: .\main\templates\main\base.html:27
+#: .\main\templates\main\base.html:35 .\main\templates\main\base.html:74
+#: .\main\templates\main\calendar.html:9
 msgid "Events Calendar"
 msgstr ""
 
-#: .\main\templates\main\base.html:30
+#: .\main\templates\main\base.html:38 .\main\templates\main\base.html:77
 msgid "Join Us"
 msgstr ""
 
-#: .\main\templates\main\base.html:33
+#: .\main\templates\main\base.html:41 .\main\templates\main\base.html:80
+#: .\main\templates\main\gallery.html:10
 msgid "Gallery"
 msgstr ""
 
-#: .\main\templates\main\base.html:36 .\main\templates\main\contacts.html:11
+#: .\main\templates\main\base.html:44 .\main\templates\main\base.html:83
+#: .\main\templates\main\contacts.html:8
 msgid "Contacts"
 msgstr ""
 
-#: .\main\templates\main\base.html:63
+#: .\main\templates\main\base.html:112
 msgid "UNIVERSITY OF ECONOMICS"
 msgstr ""
 
-#: .\main\templates\main\base.html:64
+#: .\main\templates\main\base.html:113
 msgid "DIVING CLUB"
 msgstr ""
 
-#: .\main\templates\main\base.html:65
+#: .\main\templates\main\base.html:114
 msgid ""
-"The Diving Club of the University of Economics is a school-affiliated diving "
-"club based in Prague."
+"The Diving Club of the University of Economics is a school-affiliated club "
+"based in Prague."
 msgstr ""
 
-#: .\main\templates\main\base.html:87
+#: .\main\templates\main\base.html:135
 msgid "HELPFUL"
 msgstr ""
 
-#: .\main\templates\main\base.html:87
+#: .\main\templates\main\base.html:135
 msgid "LINKS"
 msgstr ""
 
-#: .\main\templates\main\base.html:88
+#: .\main\templates\main\base.html:136
 msgid "Useful links to our partners and resources"
 msgstr ""
 
-#: .\main\templates\main\contacts.html:8
-msgid "Contacts - Nautilus"
+#: .\main\templates\main\calendar.html:10
+msgid "There are currently no events scheduled."
 msgstr ""
 
-#: .\main\templates\main\contacts.html:16
-#: .\main\templates\main\contacts.html:29
-#: .\main\templates\main\contacts.html:41
-msgid "Contact 1"
+#: .\main\templates\main\contacts.html:12
+msgid "Our Team"
 msgstr ""
 
-#: .\main\templates\main\contacts.html:20
-#: .\main\templates\main\contacts.html:33
-#: .\main\templates\main\contacts.html:45
+#: .\main\templates\main\contacts.html:21
 msgid "Position: Instructor"
+msgstr ""
+
+#: .\main\templates\main\contacts.html:35
+msgid "Position: Chairman"
+msgstr ""
+
+#: .\main\templates\main\contacts.html:49
+#: .\main\templates\main\contacts.html:63
+msgid "Position: Deputy chairman"
+msgstr ""
+
+#: .\main\templates\main\contacts.html:74
+msgid "Address"
+msgstr ""
+
+#: .\main\templates\main\contacts.html:76
+msgid "View on Google Maps"
+msgstr ""
+
+#: .\main\templates\main\contacts.html:81
+msgid "Follow Us"
 msgstr ""
 
 #: .\main\templates\main\form_success.html:5
@@ -151,12 +151,50 @@ msgstr ""
 msgid "Your registration has been submitted successfully."
 msgstr ""
 
-#: .\main\templates\main\home.html:13
+#: .\main\templates\main\home.html:14
 msgid "Diving Club"
 msgstr ""
 
-#: .\main\templates\main\home.html:14
+#: .\main\templates\main\home.html:15
 msgid "University of Economics"
+msgstr ""
+
+#: .\main\templates\main\home.html:28
+msgid "About Our Diving Club"
+msgstr ""
+
+#: .\main\templates\main\home.html:30
+msgid ""
+"Welcome to the Nautilus Diving Club at the University of Economics! Our club "
+"is dedicated to fostering a passionate community of divers who are "
+"enthusiastic about exploring the underwater world. We offer a range of "
+"diving courses for all skill levels, from beginners to advanced divers. Our "
+"regular diving excursions take members to some of the most beautiful and "
+"diverse diving sites, providing opportunities to learn, practice, and enjoy "
+"the wonders of marine life. Additionally, we are actively involved in "
+"environmental conservation projects and promoting sustainable diving "
+"practices. Join us to enhance your diving skills, travel and make new "
+"friends."
+msgstr ""
+
+#: .\main\templates\main\home.html:41
+msgid "About NAUI"
+msgstr ""
+
+#: .\main\templates\main\home.html:43
+msgid ""
+"The National Association of Underwater Instructors (NAUI) is a globally "
+"recognized leader in diver training and certification. NAUI is committed to "
+"ensuring the highest standards of safety, education, and environmental "
+"stewardship in the diving community. By partnering with NAUI, our club "
+"provides members with access to comprehensive training programs, expert "
+"instructors, and a supportive network of diving professionals. NAUI's "
+"emphasis on personalized instruction and continuous skill development aligns "
+"perfectly with our mission to cultivate knowledgeable and responsible "
+"divers. Whether you're looking to obtain your Open Water Diver "
+"certification, advance to specialty courses, or participate in professional "
+"development opportunities, NAUI offers the resources and expertise to help "
+"you achieve your diving goals."
 msgstr ""
 
 #: .\main\templates\main\registration.html:5
@@ -1393,4 +1431,4 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
-msgstr ""
+msgstr "" ""

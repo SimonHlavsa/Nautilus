@@ -2,17 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-#, fuzzy
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-07 06:46+0100\n"
+"POT-Creation-Date: 2025-01-12 18:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -67,53 +66,53 @@ msgstr ""
 "NAUI. Nahrajte až 5 podporovaných souborů: PDF nebo obrázek. Maximální "
 "velikost jednoho souboru je 10 MB."
 
-#: .\main\templates\main\base.html:30 .\main\templates\main\base.html:69
+#: .\main\templates\main\base.html:32 .\main\templates\main\base.html:71
 msgid "Home"
 msgstr "Domů"
 
-#: .\main\templates\main\base.html:33 .\main\templates\main\base.html:72
+#: .\main\templates\main\base.html:35 .\main\templates\main\base.html:74
 #: .\main\templates\main\calendar.html:9
 msgid "Events Calendar"
 msgstr "Kalendář událostí"
 
-#: .\main\templates\main\base.html:36 .\main\templates\main\base.html:75
+#: .\main\templates\main\base.html:38 .\main\templates\main\base.html:77
 msgid "Join Us"
 msgstr "Přidejte se k nám"
 
-#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:78
+#: .\main\templates\main\base.html:41 .\main\templates\main\base.html:80
 #: .\main\templates\main\gallery.html:10
 msgid "Gallery"
 msgstr "Galerie"
 
-#: .\main\templates\main\base.html:42 .\main\templates\main\base.html:81
+#: .\main\templates\main\base.html:44 .\main\templates\main\base.html:83
 #: .\main\templates\main\contacts.html:8
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: .\main\templates\main\base.html:110
+#: .\main\templates\main\base.html:112
 msgid "UNIVERSITY OF ECONOMICS"
 msgstr "VYSOKÁ ŠKOLA EKONOMICKÁ"
 
-#: .\main\templates\main\base.html:111
+#: .\main\templates\main\base.html:113
 msgid "DIVING CLUB"
 msgstr "POTÁPĚČSKÝ KLUB"
 
-#: .\main\templates\main\base.html:112
+#: .\main\templates\main\base.html:114
 msgid ""
 "The Diving Club of the University of Economics is a school-affiliated club "
 "based in Prague."
 msgstr ""
 "Potápěčský klub Vysoké školy ekonomické je školní klub se sídlem v Praze."
 
-#: .\main\templates\main\base.html:133
+#: .\main\templates\main\base.html:135
 msgid "HELPFUL"
 msgstr "UŽITEČNÉ"
 
-#: .\main\templates\main\base.html:133
+#: .\main\templates\main\base.html:135
 msgid "LINKS"
 msgstr "ODKAZY"
 
-#: .\main\templates\main\base.html:134
+#: .\main\templates\main\base.html:136
 msgid "Useful links to our partners and resources"
 msgstr "Užitečné odkazy na naše partnery a zdroje"
 
@@ -168,8 +167,6 @@ msgid "University of Economics"
 msgstr "Vysoká škola ekonomická"
 
 #: .\main\templates\main\home.html:28
-#, fuzzy
-#| msgid "Join Our Diving Club"
 msgid "About Our Diving Club"
 msgstr "O našem potápěčském klubu"
 
@@ -220,14 +217,13 @@ msgstr ""
 "líderem v oblasti výcviku a certifikace potápěčů. NAUI se zavazuje k "
 "zajištění nejvyšších standardů bezpečnosti, vzdělávání a ochrany životního "
 "prostředí v potápěčské komunitě. Ve spolupráci s NAUI poskytuje náš klub "
-"členům přístup k komplexním výcvikovým programům, odborným instruktorům a "
-"podpůrnému networkingu profesionálních potápěčů. Zaměření NAUI na "
-"personalizovanou výuku a neustálý rozvoj dovedností dokonale odpovídá našemu "
-"poslání podporovat znalé a odpovědné potápěče. Ať už chcete získat "
-"certifikaci Open Water Diver, rozšířit své dovednosti v specializovaných "
-"kurzech nebo se zapojit do profesionálních vývojových příležitostí, NAUI "
-"nabízí zdroje a odborné znalosti, které vám pomohou dosáhnout vašich "
-"potápěčských cílů."
+"členům přístup k komplexním výcvikovým programům, odborným instruktorům a "
+"podpůrné síti profesionálních potápěčů. Zaměření NAUI na personalizovanou "
+"výuku a neustálý rozvoj dovedností dokonale odpovídá našemu poslání "
+"podporovat znalé a odpovědné potápěče. Ať už chcete získat certifikaci Open "
+"Water Diver, rozšířit své dovednosti ve specializovaných kurzech nebo se "
+"zapojit do profesionálních rozvojových příležitostí, NAUI nabízí zdroje a "
+"odborné znalosti, které vám pomohou dosáhnout vašich potápěčských cílů."
 
 #: .\main\templates\main\registration.html:5
 msgid "Registration Form"
@@ -1464,35 +1460,3 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
-
-#: .\venv\Lib\site-packages\httplib2\__init__.py:408
-#, python-format
-msgid "Content purported to be compressed with %s but failed to decompress."
-msgstr ""
-
-#: .\venv\Lib\site-packages\httplib2\__init__.py:572
-#, python-format
-msgid "Unsupported value for qop: %s."
-msgstr ""
-
-#: .\venv\Lib\site-packages\httplib2\__init__.py:576
-#: .\venv\Lib\site-packages\httplib2\__init__.py:654
-#, python-format
-msgid "Unsupported value for algorithm: %s."
-msgstr ""
-
-#: .\venv\Lib\site-packages\httplib2\__init__.py:649
-msgid "The challenge doesn't contain a server nonce, or this one is empty."
-msgstr ""
-
-#: .\venv\Lib\site-packages\httplib2\__init__.py:659
-#, python-format
-msgid "Unsupported value for pw-algorithm: %s."
-msgstr ""
-
-#: .\venv\Lib\site-packages\httplib2\__init__.py:1468
-msgid "Redirected but the response is missing a Location: header."
-msgstr ""
-
-#~ msgid "Position: Organizer"
-#~ msgstr "Pozice: Organizátor"
