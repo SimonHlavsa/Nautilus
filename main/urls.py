@@ -10,4 +10,5 @@ urlpatterns = [
     path('calendar/', views.calendar, name='calendar'),
     path('gallery/', views.gallery, name='gallery'),
     path('gallery/detail/', views.gallery_detail, name='gallery_detail'),
+    path('ping/', views.ping, name='ping'),
 ]

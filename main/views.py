@@ -1,6 +1,7 @@
 import os
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.shortcuts import render
@@ -112,7 +113,7 @@ def gallery(request):
         images = get_images_in_folder(folder['id'], refresh=bool(refresh))
         if not images:
             continue
-        
+
         first_image = images[0] if images else None
         thumbnail_link = first_image.get('thumbnailLink') if first_image else None
         high_res_link = thumbnail_link.replace("s220", "s800")
@@ -155,3 +156,6 @@ def contacts(request):
     This view displays contact information and related resources for the site.
     """
     return render(request, 'main/contacts.html')
+
+def ping(request):
+    return HttpResponse("pong")
