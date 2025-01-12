@@ -138,6 +138,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Nastavení primárního jazyka na češtinu
 LANGUAGE_CODE = 'cs'
 
+USE_I18N = True
+USE_L10N = True
+
 # Podpora pro časové pásmo
 TIME_ZONE = 'Europe/Prague'
 
