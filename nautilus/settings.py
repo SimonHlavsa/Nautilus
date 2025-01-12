@@ -40,6 +40,10 @@ ALLOWED_HOSTS = [
     'nautilus-d84r.onrender.com',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://nautilus-d84r.onrender.com',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
