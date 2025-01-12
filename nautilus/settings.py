@@ -44,8 +44,8 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://nautilus-d84r.onrender.com',
-    'nautilus-vse.cz',
-    'www.nautilus-vse.cz',
+    'https://nautilus-vse.cz',
+    'https://www.nautilus-vse.cz',
 ]
 
 # Application definition
