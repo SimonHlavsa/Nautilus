@@ -66,7 +66,7 @@ def registration(request):
             # Prepare email details
             email_subject = 'New Registration'
             from_email = settings.DEFAULT_FROM_EMAIL
-            to_email = ['simon.hlavsa55@gmail.com']
+            to_email = ['dvorakpv@vse.cz']
 
             # Prepare plain text content
             text_content = f"""
