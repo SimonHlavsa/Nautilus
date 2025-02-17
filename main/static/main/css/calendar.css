@@ -1,0 +1,22 @@
+.card {
+    background-color: #f7f6f4;
+}
+@media (width: 992px) {
+    .link-red {
+      width: 140px;
+    }
+  }
+  
+.link-red a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid #e84007;
+}
+.link-red:hover a {
+    text-decoration: none;
+    padding: 0 5px;
+    border-bottom: 2px solid #e84007;
+}
+.chevron-red {
+    color: #e84007;
+}

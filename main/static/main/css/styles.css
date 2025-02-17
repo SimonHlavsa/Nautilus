@@ -10,7 +10,7 @@ body {
     min-height: 100vh; 
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .site-content {
@@ -30,7 +30,13 @@ footer {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 15px;
+    
 }
+@media (min-width: 992px) {
+    .custom-container {
+        min-width: 700px;
+    }
+  }
 
 /* Navbar */
 .custom-navbar {

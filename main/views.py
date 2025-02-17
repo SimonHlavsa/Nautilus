@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
-from main.drive_utils import get_folders, get_images_in_folder
+from main.drive_utils import extract_fb_link, get_folders, get_future_calendar_events, get_images_in_folder
 from main.forms import RegistrationForm
 
 def homepage(request):
@@ -20,13 +20,28 @@ def homepage(request):
 
 def calendar(request):
     """
-    Renders the calendar view.
-    
-    This view can load events from an external API and pass them to the 
-    template for display. Currently, it sends an empty list as a placeholder.
+    Renders the main/calendar.html template and passes Google Calendar event data to it.
     """
-    events = []  # Currently an empty list
-    return render(request, 'main/calendar.html', {'events': events})
+    calendar_id = "vsenautilus@gmail.com"
+    events = get_future_calendar_events(calendar_id)
+    
+    # Process each event's description to extract the Facebook link, if present
+    for event in events:
+        if event.get("description"):
+            fb_link, new_description = extract_fb_link(event["description"])
+            if fb_link:
+                event["fbLink"] = fb_link
+                event["description"] = new_description
+            else:
+                event["fbLink"] = ""
+        else:
+            event["fbLink"] = ""
+    
+    context = {
+        "events": events,
+    }
+    
+    return render(request, "main/calendar.html", context)
 
 def registration(request):
     """
@@ -104,14 +119,13 @@ def gallery(request):
     images to display the first image as a thumbnail. The results are cached 
     for optimization.
     """
-    refresh = request.GET.get('refresh', None)
 
     root_folder_id = os.environ.get('GOOGLE_FOLDER_ID')
-    folders = get_folders(root_folder_id, refresh=bool(refresh))
+    folders = get_folders(root_folder_id)
     enhanced_folders = []
 
     for folder in folders:
-        images = get_images_in_folder(folder['id'], refresh=bool(refresh))
+        images = get_images_in_folder(folder['id'])
         if not images:
             continue
 
@@ -135,9 +149,8 @@ def gallery_detail(request):
     """
     folder_id = request.GET.get('folder_id')
     folder_name = request.GET.get('folder_name', 'Gallery')
-    refresh = request.GET.get('refresh', None)
 
-    images = get_images_in_folder(folder_id, refresh=bool(refresh))
+    images = get_images_in_folder(folder_id)
     enhanced_folders = []
 
     for img in images:
