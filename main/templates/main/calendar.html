@@ -20,7 +20,12 @@
                     {{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }} {% trans " - " %} {{ event.end.dateTime|iso_to_datetime|date:"d/m/Y" }}
                   </h6>
                 {% else %}
-                  <h6 class="card-title m-0 me-2">{{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }}</h6>
+                  {% if event.start.dateTime %}
+                    <h6 class="card-title m-0 me-2">{{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }}</h6>
+                  {% endif %}
+                  {% if event.start.date %}
+                    <h6 class="card-title m-0 me-2">{{ event.start.date|iso_to_datetime|date:"d/m/Y" }}</h6>
+                  {% endif %}      
                 {% endif %}
                 <i class="bi bi-chevron-down chevron-red" id="icon{{ forloop.counter }}"></i>
             </div>
