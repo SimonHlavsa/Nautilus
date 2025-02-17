@@ -2,12 +2,11 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-12 18:53+0100\n"
+"POT-Creation-Date: 2025-02-17 04:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,7 +70,6 @@ msgid "Home"
 msgstr "Domů"
 
 #: .\main\templates\main\base.html:35 .\main\templates\main\base.html:74
-#: .\main\templates\main\calendar.html:9
 msgid "Events Calendar"
 msgstr "Kalendář událostí"
 
@@ -117,8 +115,32 @@ msgid "Useful links to our partners and resources"
 msgstr "Užitečné odkazy na naše partnery a zdroje"
 
 #: .\main\templates\main\calendar.html:10
-msgid "There are currently no events scheduled."
-msgstr "Momentálně nejsou vypsány žádné akce."
+msgid "Event Calendar"
+msgstr "Kalendář událostí"
+
+#: .\main\templates\main\calendar.html:20
+msgid " - "
+msgstr " - "
+
+#: .\main\templates\main\calendar.html:31
+msgid "Start: "
+msgstr "Začátek: "
+
+#: .\main\templates\main\calendar.html:36
+msgid "Location: "
+msgstr "Místo: "
+
+#: .\main\templates\main\calendar.html:43
+msgid "Description:"
+msgstr "Popis:"
+
+#: .\main\templates\main\calendar.html:50
+msgid "Facebook Event"
+msgstr "Facebook událost"
+
+#: .\main\templates\main\calendar.html:60
+msgid "There are currently no scheduled events in the calendar."
+msgstr "Momentálně nejsou v kalendáři žádné naplánované akce."
 
 #: .\main\templates\main\contacts.html:12
 msgid "Our Team"
