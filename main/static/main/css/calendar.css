@@ -1,12 +1,9 @@
 .card {
     background-color: #f7f6f4;
 }
-@media (width: 992px) {
-    .link-red {
-      width: 140px;
-    }
-  }
-  
+.link-red {
+    width: 150px;
+}
 .link-red a {
     text-decoration: none;
     color: black;
