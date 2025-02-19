@@ -49,6 +49,20 @@
                 </p>
                 <p>{{ event.description|safe }}</p>
             {% endif %}
+
+            {% if event.attachments %}
+              <div class="d-flex flex-wrap mb-2">
+                {% for attachment in event.attachments %}
+                  {% if attachment.fileId %}
+                    <a href="https://drive.google.com/uc?export=view&id={{ attachment.fileId }}" target="_blank" class="btn btn-outline-dark me-2 mb-2">
+                      {{ attachment.title }}
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          
+
             {% if event.fbLink %}
             <div class="d-flex justify-content-end">
                 <div class="d-flex justify-content-center link-red">
