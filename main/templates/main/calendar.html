@@ -9,72 +9,73 @@
 {% block content %}
 <h1 class="text-center mb-4">{% trans "Event Calendar" %}</h1>
 {% if events %}
-  {% for event in events %}
-    <div class="card mb-4 w-100">
-      <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center mb-2 collapse-toggle" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
-            <h5 class="card-title m-0">{{ event.summary }}</h5>
-            <div class="d-flex align-items-center">
-                {% if event.start.dateTime and event.end.dateTime and event.start.dateTime|iso_to_datetime|date:"Y-m-d" != event.end.dateTime|iso_to_datetime|date:"Y-m-d" %}
-                  <h6 class="card-title m-0 me-2">
-                    {{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }} {% trans " - " %} {{ event.end.dateTime|iso_to_datetime|date:"d/m/Y" }}
-                  </h6>
-                {% else %}
-                  {% if event.start.dateTime %}
-                    <h6 class="card-title m-0 me-2">{{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }}</h6>
+  <div class="calendar-container">
+    {% for event in events %}
+      <div class="card mb-4 w-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-2 collapse-toggle" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
+              <h5 class="card-title m-0">{{ event.summary }}</h5>
+              <div class="d-flex align-items-center">
+                  {% if event.start.dateTime and event.end.dateTime and event.start.dateTime|iso_to_datetime|date:"Y-m-d" != event.end.dateTime|iso_to_datetime|date:"Y-m-d" %}
+                    <h6 class="card-title m-0 me-2">
+                      {{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }} {% trans " - " %} {{ event.end.dateTime|iso_to_datetime|date:"d/m/Y" }}
+                    </h6>
+                  {% else %}
+                    {% if event.start.dateTime %}
+                      <h6 class="card-title m-0 me-2">{{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }}</h6>
+                    {% endif %}
+                    {% if event.start.date %}
+                      <h6 class="card-title m-0 me-2">{{ event.start.date|iso_to_datetime|date:"d/m/Y" }}</h6>
+                    {% endif %}      
                   {% endif %}
-                  {% if event.start.date %}
-                    <h6 class="card-title m-0 me-2">{{ event.start.date|iso_to_datetime|date:"d/m/Y" }}</h6>
-                  {% endif %}      
-                {% endif %}
-                <i class="bi bi-chevron-down chevron-red" id="icon{{ forloop.counter }}"></i>
-            </div>
-        </div>
-        <hr>
-        {% if event.start.dateTime %}
-          <p class="card-text mb-2">
-            <strong>{% trans "Start: " %}</strong> {{ event.start.dateTime|iso_to_datetime|date:"TIME_FORMAT" }}
-          </p>
-        {% endif %}
-        {% if event.location %}
-          <p class="card-text mb-2">
-            <strong>{% trans "Location: " %}</strong> {{ event.location }}
-          </p>
-        {% endif %}
-        <div class="collapse" id="collapse{{ forloop.counter }}">
-          <div class="mb-2">
-            {% if event.description %}
-                <p class="card-text my-1">
-                    <strong>{% trans "Description:" %}</strong>
-                </p>
-                <p>{{ event.description|safe }}</p>
-            {% endif %}
-
-            {% if event.attachments %}
-              <div class="d-flex flex-wrap mb-2">
-                {% for attachment in event.attachments %}
-                  {% if attachment.fileId %}
-                    <a href="https://drive.google.com/uc?export=view&id={{ attachment.fileId }}" target="_blank" class="btn btn-outline-dark me-2 mb-2">
-                      {{ attachment.title }}
-                    </a>
-                  {% endif %}
-                {% endfor %}
+                  <i class="bi bi-chevron-down chevron-red" id="icon{{ forloop.counter }}"></i>
               </div>
-            {% endif %}
-          
+          </div>
+          <hr>
+          {% if event.start.dateTime %}
+            <p class="card-text mb-2">
+              <strong>{% trans "Start: " %}</strong> {{ event.start.dateTime|iso_to_datetime|date:"TIME_FORMAT" }}
+            </p>
+          {% endif %}
+          {% if event.location %}
+            <p class="card-text mb-2">
+              <strong>{% trans "Location: " %}</strong> {{ event.location }}
+            </p>
+          {% endif %}
+          <div class="collapse" id="collapse{{ forloop.counter }}">
+            <div>
+              {% if event.description %}
+                  <p class="card-text mb-2">
+                      <strong>{% trans "Description:" %}</strong>
+                  </p>
+                  <p>{{ event.description|safe }}</p>
+              {% endif %}
 
-            {% if event.fbLink %}
-            <div class="d-flex justify-content-end">
-                <div class="d-flex justify-content-center link-red">
-                    <a href="{{ event.fbLink }}" target="_blank" class=" text-decoration-none"><strong>{% trans "Facebook Event" %}</strong></a>
+              {% if event.attachments %}
+                <div class="d-flex flex-wrap mb-2">
+                  {% for attachment in event.attachments %}
+                    {% if attachment.fileId %}
+                      <a href="https://drive.google.com/uc?export=view&id={{ attachment.fileId }}" target="_blank" class="btn btn-outline-dark me-2 mb-2">
+                        {{ attachment.title }}
+                      </a>
+                    {% endif %}
+                  {% endfor %}
                 </div>
+              {% endif %}
+            
+              {% if event.fbLink %}
+              <div class="d-flex justify-content-end">
+                  <div class="d-flex justify-content-center link-red">
+                      <a href="{{ event.fbLink }}" target="_blank" class=" text-decoration-none"><strong>{% trans "Facebook Event" %}</strong></a>
+                  </div>
+              </div>
+              {% endif %}
             </div>
-            {% endif %}
           </div>
         </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 {% else %}
   <p class="text-center">{% trans "There are currently no scheduled events in the calendar." %}</p>
 {% endif %}

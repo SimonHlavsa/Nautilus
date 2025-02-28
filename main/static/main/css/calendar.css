@@ -1,3 +1,8 @@
+@media (min-width: 992px) {
+    .calendar-container {
+        width: 850px;
+    }
+  }
 .card {
     background-color: #f7f6f4;
 }
