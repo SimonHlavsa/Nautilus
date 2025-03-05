@@ -20,6 +20,10 @@
                     <h6 class="card-title m-0 me-2">
                       {{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }} {% trans " - " %} {{ event.end.dateTime|iso_to_datetime|date:"d/m/Y" }}
                     </h6>
+                  {% elif event.start.date and event.end.date and event.start.date|iso_to_datetime|date:"Y-m-d" != event.end.date|iso_to_datetime|date:"Y-m-d" %}
+                  <h6 class="card-title m-0 me-2">
+                    {{ event.start.date|iso_to_datetime|date:"d/m/Y" }} {% trans " - " %} {{ event.end.date|iso_to_datetime|date:"d/m/Y" }}
+                  </h6>
                   {% else %}
                     {% if event.start.dateTime %}
                       <h6 class="card-title m-0 me-2">{{ event.start.dateTime|iso_to_datetime|date:"d/m/Y" }}</h6>
